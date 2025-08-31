@@ -20,6 +20,11 @@ body{
     margin-bottom: 0;
 }
 
+.header p {
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
 #jurusan{
     font-size: 1.2em;
     color: hsl(204, 70%, 70%);
@@ -124,7 +129,6 @@ body{
     padding: 12px 20px;
     font-size: 14px;
     margin: 0;
-    width: 100%;
 }
 
 /* Responsive */
