@@ -81,7 +81,7 @@ body{
 .skill-rows{
     display: flex;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -91,9 +91,6 @@ body{
     max-width: 350px;
 }
 
-.skills ul{
-    list-style: none;
-}
 
 .skills li {
     background-color: hsl(192, 15%, 94%);
@@ -131,18 +128,35 @@ body{
     margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .section {
-        padding: 0 20px;
+/* Untuk responsifitas website */
+/* Untuk ukuran yang memaksa salah satu paragraf kontak turun */
+@media screen and (max-width: 706px) {
+    .kontak {
+        gap: 0 20px;
     }
-    
-    .skill-rows {
+
+    .kontak a, .kontak p {
+        margin:2px;
+    }
+}
+
+/* Sisanya untuk ukuran hp*/
+@media screen and (max-width: 586px) {
+    .kontak {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        gap: 0; /* hilangkan gap bawaan */
     }
-    
-    .header h1 {
-        font-size: 2em;
+    #jurusan {
+        margin-bottom: 2%;
+    }
+    .kontak p {
+        margin: 0px 0; /* kasih spasi kecil */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .kontak {
+        gap: 5px; /* makin kecil */
     }
 }
