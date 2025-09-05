@@ -3,11 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CV Filbert Ferdinand</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        /*Bagian Header*/
+        .header{
+            text-align: center;
+            background-color: hsl(210, 22%, 25%);
+            padding: 25px 20px 20px 20px;
+            margin: 0;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: hsl(0, 0%, 95%);
+            margin-bottom: 0;
+        }
+        .header p {
+            margin: 5px 0;
+            line-height: 1.2;
+        }
+        #jurusan{
+            font-size: 1.2em;
+            color: hsl(204, 70%, 70%);
+            margin-bottom: 0;
+        }
+        .kontak{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .kontak a {
+            font-size: 0.9em;
+            color: hsl(0, 0%, 86%);
+            text-decoration: none;
+        }
+
+        /*Bagian Section*/
+        .section{
+            margin-bottom: 25px;
+            padding: 0 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section h2{
+            font-size: 1.4em;
+            color: hsl(210, 29%, 24%);
+            margin-bottom: 15px;
+            border-bottom: 2px solid hsl(204, 70%, 53%);
+            padding-bottom: 5px;
+        }
+        .section h3 {
+            font-size: 1.1em;
+            color: hsl(210, 29%, 24%);
+            margin-bottom: 8px;
+        }
+        .section h3 a{
+            text-decoration: none;
+            color: hsl(210, 29%, 24%);
+        }
+        .details{
+            font-size: 1em;
+            color: hsl(184, 6%, 53%);
+            margin-bottom: 5px;
+        }
+        .skill-rows{
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .skills{
+            flex: 1;
+            min-width: 200px;
+            max-width: 350px;
+        }
+        .skills li {
+            background-color: hsl(192, 15%, 94%);
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .riwayat{
+            margin-bottom: 15px;
+        }
+        .projects {
+            padding: 15px;
+            background-color: hsl(210, 17%, 98%);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .programming-languages{
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: hsl(204, 70%, 53%);
+            font-style: italic;
+        }
+
+        /*Bagian Footer*/
+        .footer {
+            text-align: center;
+            background-color: hsl(210, 22%, 25%);
+            color: hsl(0, 0%, 95%);
+            padding: 12px 20px;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Untuk responsifitas website */
+        /* Untuk ukuran yang memaksa salah satu paragraf kontak turun ke bawah */
+        @media screen and (max-width: 706px) {
+            .kontak {
+                gap: 0 20px;
+            }
+
+            .kontak a, .kontak p {
+                margin:2px;
+            }
+        }
+
+        /* Sisanya untuk ukuran hp*/
+        @media screen and (max-width: 586px) {
+            .kontak {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            #jurusan {
+                margin-bottom: 2%;
+            }
+            .kontak p {
+                margin: 0px 0;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .kontak {
+                gap: 5px;
+            }
+        }
+
+        /* Tambahan styling untuk memberikan sedikit interaktifitas
+        Terutama ketika hover ke link kontak dan projek GitHub*/
+        .kontak a:hover, .projects a:hover{
+            text-decoration: underline;
+            color: hsl(204, 70%, 70%);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <!--Seluruh konten dibuat dalam section-->
+    <!--Bagian header-->
     <div class="header">
         <h1>Filbert Ferdinand</h1>
         <p id="jurusan">Teknik Informatika</p>
@@ -18,28 +173,28 @@
             <p><a href="https://wa.me/6281211365855" target="_blank">
                 📱 +62 812-1136-5855
             </a></p>
-            <p><a href="https://www.instagram.com/f_ferdinand27/">
+            <p><a href="https://www.instagram.com/f_ferdinand27/" target="_blank">
                 🅾 @f_ferdinand27
             </a></p>
-            <p><a href="https://github.com/gromx-log">
+            <p><a href="https://github.com/gromx-log" target="_blank">
                 🔗 @gromx-log
             </a></p>
         </div>
     </div>
 
     <!--Semua section seperti Tentang Saya, Project, Pengalaman
-        Organisasi, Pendidikan, dan Skill dibuat dalam satu div
+        Organisasi, Pendidikan, dan Skill dibuat dalam satu class
         yang sama bernama section-->
 
     <!--Tentang Saya-->
     <div class="section">
         <h2>Tentang Saya</h2>
         <p>
-            Hai, saya Filbert Ferdinand dengan NIM 535240135.
-            Sebagai mahasiswa Teknik Informatika semester 3, saya memiliki semangat tinggi 
-            untuk mengeksplorasi dunia pemrograman, khususnya di bidang web dan aplikasi mobile. 
-            Dengan latar belakang berbagai proyek akademik dan keterampilan teknis yang terus berkembang, 
-            saya bercita-cita untuk menciptakan solusi digital yang bermanfaat bagi banyak orang.
+            Hai, aku adalah seorang mahasiswa Teknik Informatika semester 3 di Universitas Tarumanagara 
+            dan saat ini sedang mendalami web-programming lewat HTML, CSS, dan Javascript serta mencoba 
+            membuat sebuah aplikasi mobile cross-platform dengan Flutter. Hobiku untuk selalu ingin mencoba 
+            dan belajar hal baru menjadi langkah yang kupijak untuk dapat menciptakan sebuah solusi digital 
+            baru yang bisa membawa manfaat bagi orang di sekitar saya.
         </p>
     </div>
 
@@ -66,7 +221,7 @@
             <p class="programming-languages">Tech: HTML, CSS, JavaScript</p>
         </div>
         <div class="projects">
-            <h3><a href="https://github.com/gromx-log/Project-Enchronia">Project Enchronia</a></h3>
+            <h3><a href="https://github.com/gromx-log/Project-Enchronia" target="_blank">Project Enchronia</a></h3>
             <p>
                 Proyek game pertama yang ditulis secara menyeluruh menggunakan C++
                 Proyek ini ditujukan sebagai tugas pertama saat memasuki kuliah
