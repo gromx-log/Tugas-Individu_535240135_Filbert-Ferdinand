@@ -46,7 +46,7 @@ Jika Anda ingin menjalankan proyek ini di mesin lokal Anda, ikuti langkah-langka
 3.  **Buka folder tugas yang diinginkan:**
     ```bash
     cd [Nama-Folder-Tugas] 
-    # Contoh: cd CV-Online
+    # Contoh: cd FILBERT_FERDINAND_535240135_TUGAS1
     ```
 4.  **Buka file `index.html`** pada browser pilihan Anda.
 
